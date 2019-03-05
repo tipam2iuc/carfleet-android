@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Carfleet</string>
+    <string name="title_1">Car management</string>
+    <string name="title_2">Driver management</string>
+    <string name="title_3">Document management</string>
+    <string name="title_1_content">Les différents véhicule sont gerés avec éfficacité dans chaque paarking</string>
+    <string name="title_2_content">Les conducteurs de chaque véhicule sont identifiés </string>
+    <string name="title_3_content">Chaque document est archivé et garder en toute sécurité </string>
+
+
+
+    <array name="titlePagesViewPager">
+        <item>Car management</item>
+        <item>Driver management</item>
+        <item>Document management</item>
+    </array>
+
+    <array name="descriptionPagesViewPager">
+        <item>Les différents véhicule sont gerés avec éfficacité dans chaque paarking</item>
+        <item>Les conducteurs de chaque véhicule sont identifiés</item>
+        <item>Chaque document est archivé et garder en toute sécurité</item>
+    </array>
+
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C6538D</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorBlueSky">#2699FB</color>
+    <color name="blanc">#FFFFFF</color>
+    <color name="fond1">#1F9050</color>
+    <color name="fond2">#F9C82D</color>
+    <color name="fond3">#7EB4D6</color>
+
+
+    <color name="blue_overlay">#3E7BAF</color>
+    <color name="purple_trans">#66872C76</color>
+    <color name="yellow">#FFF895</color>
+    <color name="txt_hint">#33FFFFFF</color>
+
+</resources>
