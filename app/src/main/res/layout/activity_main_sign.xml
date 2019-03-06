@@ -65,6 +65,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/ll_bottom"
         android:layout_alignTop="@+id/image"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="28dp"
         android:text="La Gestion De vos Vehicules devient encore plus Facile"
         android:textAlignment="center"
