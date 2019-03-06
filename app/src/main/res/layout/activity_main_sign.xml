@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -12,69 +12,83 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:src="@drawable/bg" />
+
     <LinearLayout
         android:id="@+id/ll_bottom"
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
         android:padding="@dimen/space20"
-        android:gravity="center_horizontal">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <Button
             android:id="@+id/btn_sign_up"
             android:layout_width="@dimen/btn_width"
             android:layout_height="@dimen/btn_height"
+            android:layout_marginBottom="@dimen/space20"
+            android:background="@drawable/btn_white_selector"
             android:text="S'INSCRIRE"
             android:textAllCaps="false"
-            android:textSize="@dimen/txt16"
             android:textColor="@color/blue_overlay"
-            android:background="@drawable/btn_white_selector"
-            android:layout_marginBottom="@dimen/space20"/>
+            android:textSize="@dimen/txt16" />
+
         <Button
             android:id="@+id/btn_sign_in"
             android:layout_width="@dimen/btn_width"
             android:layout_height="@dimen/btn_height"
+            android:layout_marginBottom="@dimen/space20"
+            android:background="@drawable/btn_white_selector"
             android:text="SE CONNECTER"
             android:textAllCaps="false"
-            android:textSize="@dimen/txt16"
             android:textColor="@color/blue_overlay"
-            android:background="@drawable/btn_white_selector"
 
-            android:layout_marginBottom="@dimen/space20"/>
+            android:textSize="@dimen/txt16" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:text="Aide?"
-            android:textSize="@dimen/txt14"
-            android:textStyle="normal"
             android:textColor="@android:color/white"
-            android:gravity="center_horizontal"/>
+            android:textSize="@dimen/txt14"
+            android:textStyle="normal" />
     </LinearLayout>
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/ll_bottom"
         android:layout_alignTop="@+id/image"
-        android:layout_marginStart="@dimen/space40"
-        android:layout_marginLeft="@dimen/space40"
-        android:layout_marginTop="193dp"
-        android:layout_marginEnd="@dimen/space40"
-        android:layout_marginRight="@dimen/space40"
-        android:layout_marginBottom="42dp"
+        android:layout_marginBottom="28dp"
         android:text="La Gestion De vos Vehicules devient encore plus Facile"
+        android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="@dimen/txt30"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ll_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="275dp"
-        android:layout_height="95dp"
+        android:layout_width="277dp"
+        android:layout_height="138dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="47dp"
-        app:srcCompat="@drawable/logo" />
-</RelativeLayout>
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/mon_logo_round" />
+</android.support.constraint.ConstraintLayout>
