@@ -47,7 +47,7 @@ public class MyPageAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object o) {
-        return view == ((FrameLayout) o);
+        return view == ((LinearLayout) o);
     }
 
     @Override
@@ -89,6 +89,6 @@ public class MyPageAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView((FrameLayout) object);
+        container.removeView((LinearLayout) object);
     }
 }

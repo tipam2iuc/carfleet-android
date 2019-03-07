@@ -40,9 +40,30 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-      MyPageAdapter myPagerAdapter = new MyPageAdapter(MainActivity.this, images,title,description,button_height,button_width);
+      final MyPageAdapter myPagerAdapter = new MyPageAdapter(MainActivity.this, images,title,description,button_height,button_width);
         viewPager.setAdapter(myPagerAdapter);
+
         wormDotsIndicator.setViewPager(viewPager);
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int i, float v, int i1) {
+                if(i<(myPagerAdapter.getCount()) -1 && i<(images.length -1))
+                {
+
+                }
+            }
+
+            @Override
+            public void onPageSelected(int i) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int i) {
+
+            }
+        });
 
     }
 }
