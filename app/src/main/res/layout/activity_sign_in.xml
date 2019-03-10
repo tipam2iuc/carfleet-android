@@ -9,39 +9,52 @@
 
     <com.flaviofaria.kenburnsview.KenBurnsView
         android:id="@+id/image"
-        android:layout_width="wrap_content"
+        android:layout_width="384dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:src="@drawable/bg" />
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <LinearLayout
         android:id="@+id/ll_bottom1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/space20"
-        android:layout_marginBottom="@dimen/space20">
+        android:layout_marginBottom="@dimen/space20"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4"
+        android:layout_width="360dp"
+        android:layout_height="359dp"
+
+
         android:layout_above="@id/ll_bottom1"
-
-
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="136dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:paddingLeft="@dimen/space20"
         android:paddingRight="@dimen/space20"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -124,65 +137,83 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/sign"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="301dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.626"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="404dp">
 
-            android:layout_marginTop="@dimen/space10"
+            <ImageView
+                android:id="@+id/google_id"
+                android:layout_width="66dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/googleplusnew"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="6dp" />
 
-            android:layout_marginBottom="@dimen/space10"
-            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="78dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/google_id"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:srcCompat="@drawable/twitternew"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="6dp" />
 
-        </LinearLayout>
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="54dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/facenew"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="4dp" />
+        </android.support.constraint.ConstraintLayout>
 
 
     </LinearLayout>
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="310dp"
-        android:layout_height="38dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
+
+    <TextView
+        android:id="@+id/mp_oublie"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:text="Mots de passe oublié"
+        android:textColor="@color/blanc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.862"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.971" />
 
-        <TextView
-            android:id="@+id/mp_oublie"
-            android:layout_width="wrap_content"
-            android:layout_height="17dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="4dp"
-            android:text="Mots de passe oublié"
-            android:textColor="@color/blanc"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.615" />
+    <TextView
+        android:id="@+id/inscrire"
+        android:layout_width="71dp"
+        android:layout_height="34dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
 
-        <TextView
-            android:id="@+id/inscrire"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="8dp"
+        android:text="S'inscrire"
+        android:textColor="@color/blanc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mp_oublie"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
-            android:layout_marginTop="11dp"
-            android:layout_marginEnd="8dp"
-            android:text="S'inscrire"
-            android:textColor="@color/blanc"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/mp_oublie"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
-    </android.support.constraint.ConstraintLayout>
+
 </android.support.constraint.ConstraintLayout>
