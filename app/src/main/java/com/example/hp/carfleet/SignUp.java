@@ -1,25 +1,21 @@
 package com.example.hp.carfleet;
 
-import android.animation.AnimatorSet;
-import android.animation.ValueAnimator;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-
 
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -80,8 +76,8 @@ public class SignUp extends AppCompatActivity {
             emailf.setPadding(0, 15, 0, 15);
             passwordf = (EditText) findViewById(R.id.et_password);
             passwordf.setPadding(0, 15, 0, 15);
-            ll_button = (LinearLayout) findViewById(R.id.ll_button);
-            ll_bottom = (LinearLayout) findViewById(R.id.ll_bottom);
+            // ll_button = (LinearLayout) findViewById(R.id.ll_button);
+            //ll_bottom = (LinearLayout) findViewById(R.id.ll_bottom);
             //  ease(ll_button);
             // ease2(ll_bottom);
 

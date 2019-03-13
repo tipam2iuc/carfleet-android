@@ -1,11 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
 
-    <item android:id="@+id/db" android:title="Dashboared" android:icon="@drawable/ic_document" />
-    <item android:id="@+id/events" android:title="Events" android:icon="@drawable/ic_dasbord"/>
-    <item android:id="@+id/search" android:title="Search" android:icon="@drawable/ic_dasbord"/>
-    <item android:id="@+id/settings" android:title="Settings" android:icon="@drawable/ic_dasbord" />
-    <item android:id="@+id/activities" android:title="Activities" android:icon="@drawable/ic_dasbord"/>
-    <item android:id="@+id/logout" android:title="Logout" android:icon="@drawable/ic_dasbord"/>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_vehicule"
+            android:icon="@drawable/icons8_car_32"
+            android:title="Vehicule" />
+        <item
+            android:id="@+id/nav_document"
+            android:icon="@drawable/icons8_document_32"
+            android:title="Document" />
+        <item
+            android:id="@+id/nav_parking"
+            android:icon="@drawable/icons8_parking_32"
+            android:title="Parking" />
+        <item
+            android:id="@+id/nav_maintenance"
+            android:icon="@drawable/icons8_maintenance_32"
+            android:title="Maintenance" />
+
+
+        <item
+            android:id="@+id/nav_driver"
+            android:icon="@drawable/icons8_driver_32"
+            android:title="Drivers" />
+    </group>
+
+
+    <item android:title="Admin">
+        <menu>
+            <item
+        android:id="@+id/nav_compte"
+        android:icon="@drawable/icons8_user_account_32"
+        android:title="Compte" />
+        </menu>
+    </item>
 
 </menu>
