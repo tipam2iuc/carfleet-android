@@ -163,7 +163,7 @@ public class Drawer extends AppCompatActivity implements NavigationView.OnNaviga
                         new FragmentDriver()).commit();
                 break;
 
-            case R.id.nav_compte:
+            case R.id.nav_logout:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new FragmentCompte()).commit();
                 break;

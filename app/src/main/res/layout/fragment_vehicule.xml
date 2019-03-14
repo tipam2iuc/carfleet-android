@@ -6,23 +6,66 @@
     android:layout_height="match_parent">
 
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.design.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Fragment vehicule"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:id="@+id/carimage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/voiture11" />
+
+            <TextView
+                android:id="@+id/cartitle"
+                android:layout_width="wrap_content"
+                android:layout_height="27dp"
+                android:layout_below="@id/carimage"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:text="La Clio IV de Renault"
+                android:textColor="#383838"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cardescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cartitle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="Découvrez CLIO Berline, la plus séduisante des berlines compactes, qui possède toutes les qualités d'une citadine polyvalente."
+                android:textAlignment="textStart"
+                android:textColor="#7B7B7B"
+                android:animateLayoutChanges="true" />
+
+
+        </RelativeLayout>
 
 
 
-
-
+    </android.support.design.card.MaterialCardView>
 </android.support.constraint.ConstraintLayout>

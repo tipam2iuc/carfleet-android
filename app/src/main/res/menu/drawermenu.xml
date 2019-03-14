@@ -32,10 +32,12 @@
     <item android:title="Admin">
         <menu>
             <item
-        android:id="@+id/nav_compte"
-        android:icon="@drawable/icons8_user_account_32"
-        android:title="Compte" />
+        android:id="@+id/nav_logout"
+        android:icon="@drawable/icons_logout_32"
+        android:title="Deconnexion" />
         </menu>
+
+
     </item>
 
 </menu>

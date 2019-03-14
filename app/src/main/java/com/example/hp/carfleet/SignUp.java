@@ -107,7 +107,7 @@ public class SignUp extends AppCompatActivity {
 
                         final FirebaseUser user = firebaseAuth.getCurrentUser();
                         Toast.makeText(SignUp.this, "Now you are logged In " + firebaseAuth.getCurrentUser().getEmail(), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(SignUp.this, MainActivity.class);
+                        Intent intent = new Intent(SignUp.this, Drawer.class);
                         startActivity(intent);
                         finish();
 
