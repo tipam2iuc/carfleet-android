@@ -9,29 +9,29 @@
     android:fitsSystemWindows="true"
     tools:context=".Drawer"
     tools:openDrawer="start">
-<LinearLayout
+    <LinearLayout
 
 
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <include
-        layout="@layout/app_bar_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-    <include
-        layout="@layout/app_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</LinearLayout>
+        <include
+            layout="@layout/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 
 
     <android.support.design.widget.NavigationView
@@ -40,9 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/blanc"
-        app:itemTextColor="@color/common_google_signin_btn_text_light_default"
-        app:itemIconTint="@color/common_google_signin_btn_text_light_default"
-        app:menu="@menu/drawermenu"
+
         android:layout_gravity="start"/>
 
 

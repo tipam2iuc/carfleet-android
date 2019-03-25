@@ -9,8 +9,11 @@
     <color name="fond2">#F9C82D</color>
     <color name="fond3">#7EB4D6</color>
 
+    <color name="background_tab">#FCFCFC</color>
+    <color name="forecolor_tab">#B6B6B6</color>
+    <color name="forecolor_tab_active">#565656</color>
 
-    <color name="blue_overlay">#3E7BAF</color>
+    <color name="blue_overlay">#3e7baf</color>
     <color name="purple_trans">#66872C76</color>
     <color name="yellow">#FFF895</color>
     <color name="txt_hint">#33FFFFFF</color>

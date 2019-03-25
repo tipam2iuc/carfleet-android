@@ -20,7 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 
-public class Drawer extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class Drawer extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, FragmentVehicule.OnFragmentInteractionListener {
 
     private DrawerLayout drawer;
     TabLayout tabLayout;
@@ -40,14 +40,7 @@ public class Drawer extends AppCompatActivity implements NavigationView.OnNaviga
         setSupportActionBar(toolbar);
 
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -70,7 +63,6 @@ public class Drawer extends AppCompatActivity implements NavigationView.OnNaviga
         tabCategory=findViewById(R.id.tabCategory);
         tabAvailable=findViewById(R.id.tabAvailable);
         viewPager = findViewById(R.id.viewPager);
-        fab=findViewById(R.id.fab);
 
         pageAdapter = new PageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(pageAdapter);
@@ -82,33 +74,33 @@ public class Drawer extends AppCompatActivity implements NavigationView.OnNaviga
                 viewPager.setCurrentItem(tab.getPosition());
                 if(tab.getPosition()==0){
                     toolbar.setBackgroundColor(ContextCompat.getColor(Drawer.this,
-                            R.color.blue_overlay));
+                            R.color.background_tab));
                     tabLayout.setBackgroundColor(ContextCompat.getColor(Drawer.this,
-                            R.color.blue_overlay));
+                            R.color.background_tab));
 
                     if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
                         getWindow().setStatusBarColor(ContextCompat.getColor(Drawer.this,
-                                R.color.blue_overlay));
+                                R.color.background_tab));
                     }
                 }else if (tab.getPosition()==1){
                     toolbar.setBackgroundColor(ContextCompat.getColor(Drawer.this,
-                            R.color.blue_overlay));
+                            R.color.background_tab));
                     tabLayout.setBackgroundColor(ContextCompat.getColor(Drawer.this,
-                            R.color.blue_overlay));
+                            R.color.background_tab));
 
                     if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
                         getWindow().setStatusBarColor(ContextCompat.getColor(Drawer.this,
-                                R.color.blue_overlay));
+                                R.color.background_tab));
                     }
 
                 }else {
                     toolbar.setBackgroundColor(ContextCompat.getColor(Drawer.this,
-                            R.color.blue_overlay));
+                            R.color.background_tab));
                     tabLayout.setBackgroundColor(ContextCompat.getColor(Drawer.this,
-                            R.color.blue_overlay));
+                            R.color.background_tab));
                     if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
                         getWindow().setStatusBarColor(ContextCompat.getColor(Drawer.this,
-                                R.color.blue_overlay));
+                                R.color.background_tab));
                     }
                 }
             }

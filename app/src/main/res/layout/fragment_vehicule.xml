@@ -1,71 +1,296 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-
-    <android.support.design.card.MaterialCardView
-        android:id="@+id/cardView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
-
-        <RelativeLayout
+        android:orientation="vertical">
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="300dp">
-
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
             <ImageView
-                android:id="@+id/carimage"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:adjustViewBounds="true"
-                android:cropToPadding="true"
-                android:scaleType="centerCrop"
-                android:src="@drawable/voiture11" />
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/audi"
+                android:layout_margin="20dp"
+               />
 
             <TextView
-                android:id="@+id/cartitle"
-                android:layout_width="wrap_content"
-                android:layout_height="27dp"
-                android:layout_below="@id/carimage"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="14dp"
-                android:gravity="center"
-                android:text="La Clio IV de Renault"
-                android:textColor="#383838"
-                android:textSize="25dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/cardescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cartitle"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp"
-                android:drawablePadding="10dp"
-                android:ellipsize="end"
-                android:maxLines="3"
-                android:text="Découvrez CLIO Berline, la plus séduisante des berlines compactes, qui possède toutes les qualités d'une citadine polyvalente."
-                android:textAlignment="textStart"
-                android:textColor="#7B7B7B"
-                android:animateLayoutChanges="true" />
-
-
-        </RelativeLayout>
+                android:text="Audi"
+                android:textSize="20dp"
+                android:textColor="#676767"
+                />
+        </LinearLayout>
 
 
 
-    </android.support.design.card.MaterialCardView>
-</android.support.constraint.ConstraintLayout>
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recycle1"
+                android:orientation="horizontal">
+
+            </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/bmw"
+                android:layout_margin="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bmw"
+                android:textSize="20dp"
+                android:textColor="#676767"
+                />
+        </LinearLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycle2"
+            android:orientation="horizontal">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/citroenjpg"
+                android:layout_margin="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Citroën"
+                android:textSize="20dp"
+                android:textColor="#676767"
+                />
+        </LinearLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycle3"
+            android:orientation="horizontal">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/fordpng"
+                android:layout_margin="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ford"
+                android:textSize="20dp"
+                android:textColor="#676767"
+                />
+        </LinearLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycle4"
+            android:orientation="horizontal">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/mercedesjpg"
+                android:layout_margin="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mercedes"
+                android:textSize="20dp"
+                android:textColor="#676767"
+                />
+        </LinearLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycle5"
+            android:orientation="horizontal">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/peugeot"
+            android:layout_margin="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peogeot"
+            android:textSize="20dp"
+            android:textColor="#676767"
+            />
+    </LinearLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycle6"
+        android:orientation="horizontal">
+
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/renault"
+            android:layout_margin="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Renault"
+            android:textSize="20dp"
+            android:textColor="#676767"
+            />
+    </LinearLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycle7"
+        android:orientation="horizontal">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/toyota"
+                android:layout_margin="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toyota"
+                android:textSize="20dp"
+                android:textColor="#676767"
+                />
+        </LinearLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycle8"
+            android:orientation="horizontal">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/volkswagenjpg"
+                android:layout_margin="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volkswagen"
+                android:textSize="20dp"
+                android:textColor="#676767"
+                />
+        </LinearLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycle9"
+            android:orientation="horizontal">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

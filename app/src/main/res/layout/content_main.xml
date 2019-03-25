@@ -22,7 +22,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/blue_overlay"
+            android:background="@color/background_tab"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             android:minHeight="?actionBarSize"
             android:theme="?actionBarTheme" />
@@ -31,9 +31,10 @@
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/blue_overlay"
-            app:tabSelectedTextColor="@color/blanc"
-            app:tabTextColor="@color/blanc">
+            android:background="@color/background_tab"
+            app:tabSelectedTextColor="@color/forecolor_tab_active"
+            app:tabTextColor="@color/forecolor_tab"
+            app:tabIndicatorColor="@color/blue_overlay">
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabAll"
