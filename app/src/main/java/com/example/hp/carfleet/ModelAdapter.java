@@ -36,15 +36,21 @@ import static com.facebook.FacebookSdk.getApplicationContext;
 
 
 public class ModelAdapter extends RecyclerView.Adapter<ModelAdapter.MyViewHolder> {
-    ArrayList<Models> modelList;
+    ArrayList<Models> marquesList;
     static Context context;
     View itemView;
-    private static FirebaseAuth mAuth;
-    private static FirebaseAuth.AuthStateListener mAuthListener;
+    private final OnItemClickListener listener;
 
-    public ModelAdapter(ArrayList<Models> modelList, Context context) {
-        this.modelList = modelList;
+    public interface OnItemClickListener {
+        void onItemClick(Models item);
+    }
+
+
+    public ModelAdapter(ArrayList<Models> marquesList, Context context,OnItemClickListener listener) {
+        this.marquesList = marquesList;
         this.context = context;
+
+        this.listener = listener;
     }
 
     @NonNull
@@ -62,8 +68,15 @@ public class ModelAdapter extends RecyclerView.Adapter<ModelAdapter.MyViewHolder
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
        // try {
           //  MyViewHolder.bind(modelList.get(position));
-        holder.carTitle.setText(modelList.get(position).getName());
-        Glide.with(context).load( modelList.get(position).getPicture()).into(holder.carImage);
+        try {
+            holder.bind(marquesList.get(position),context, listener);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        TextView textView=new TextView(context);
+        textView.setText(marquesList.get(position).getName());
+        holder.carTitle.setText(marquesList.get(position).getName());
+        Glide.with(context).load( marquesList.get(position).getPicture()).into(holder.carImage);
        // } catch (IOException e) {
          //   e.printStackTrace();
       //  }
@@ -71,12 +84,14 @@ public class ModelAdapter extends RecyclerView.Adapter<ModelAdapter.MyViewHolder
 
     @Override
     public int getItemCount() {
-        return modelList.size();
+        return marquesList.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView carTitle;
         public  ImageView carImage;
+        public TextView marqueTitle;
+        public  ImageView marqueImage;
 
         public MyViewHolder(View view) {
             super(view);
@@ -84,10 +99,14 @@ public class ModelAdapter extends RecyclerView.Adapter<ModelAdapter.MyViewHolder
             carImage = (ImageView) view.findViewById(R.id.carimage);
         }
 
-        public void bind(final Models models) throws IOException {
+        public void bind(final Models models,final Context context, final OnItemClickListener listener) throws IOException {
 
 
-
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override public void onClick(View v) {
+                    listener.onItemClick(models);
+                }
+            });
 
         }
 

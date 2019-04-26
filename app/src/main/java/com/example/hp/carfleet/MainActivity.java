@@ -11,7 +11,6 @@ public class MainActivity extends AppCompatActivity {
 
     ViewPager viewPager;
     Button button;
-    Button button1;
 
     WormDotsIndicator wormDotsIndicator;
 

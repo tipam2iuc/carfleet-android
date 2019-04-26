@@ -18,4 +18,18 @@
     <color name="yellow">#FFF895</color>
     <color name="txt_hint">#33FFFFFF</color>
 
+    <color name="transparent">#00D81B60</color>
+    <color name="bleu">#D2091E84</color>
+    <color name="colorRow">#FFFFFF</color>
+    <color name="HeaderColor">#12477c</color>
+    <color name="Header">#12477B</color>
+
+    <color name="colorPrimaryTransparent">#00FFFFFF</color>
+    <color name="color_Moving_Affected">#9E00C5</color>
+    <color name="color_Not_Moving_Affected">#9E00C5</color>
+    <color name="color_Non_Affected"> #00A651</color>
+    <color name="color_Location">#0100CA</color>
+    <color name="color_Mistake">#C30000</color>
+    <color name="color_Region">#154270</color>
+
 </resources>

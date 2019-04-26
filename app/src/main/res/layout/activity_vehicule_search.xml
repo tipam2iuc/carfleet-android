@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VehiculeSearch">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_menu_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/dw_action_bar">
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/linearLayout_search"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:paddingBottom="15dp"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_menu"
+                android:id="@+id/button_menu"
+                android:padding="11dp"
+                android:scaleType="centerCrop"
+                android:background="#00FFFFFF"
+                android:layout_marginTop="17dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/textView_vehicule_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicules (--)"
+                android:layout_marginLeft="15dp"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#606060"
+                app:layout_constraintTop_toTopOf="@id/button_menu"
+                app:layout_constraintBottom_toBottomOf="@id/button_menu"
+                app:layout_constraintLeft_toRightOf="@id/button_menu"/>
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_sec_menu"
+                android:id="@+id/button_sec_menu"
+                android:scaleType="centerCrop"
+                android:background="#00FFFFFF"
+                android:padding="11dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginRight="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_notification"
+                android:id="@+id/button_notification"
+                android:scaleType="centerCrop"
+                android:padding="9dp"
+                android:background="#00FFFFFF"
+                android:layout_marginTop="17dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/button_sec_menu"/>
+
+            <TextView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:textSize="7dp"
+                android:gravity="center"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="9dp"
+                android:textColor="#fff"
+                android:background="@drawable/dw_number_notification"
+                app:layout_constraintTop_toTopOf="@id/button_notification"
+                app:layout_constraintRight_toRightOf="@id/button_notification"
+                android:text="9+"/>
+            <SearchView
+                style="@style/AppTheme"
+                android:id="@+id/searchView_find_travel"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:queryHint="Entrez une region"
+                android:iconifiedByDefault="false"
+                android:background="@drawable/dw_search_bar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_menu"
+                android:layout_marginTop="7dp"/>
+
+            <ImageButton
+                android:id="@+id/button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/dw_search_bar"
+                android:padding="7dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_setting"
+                app:layout_constraintTop_toTopOf="@+id/searchView_find_travel"
+                app:layout_constraintRight_toRightOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.Toolbar>
+    <android.support.v7.widget.RecyclerView
+        android:background="#fff"
+        android:id="@+id/recyclerView_liste_voiture"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tool_menu_bar"
+        app:layout_constraintVertical_bias="0.0">
+
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.constraint.ConstraintLayout>

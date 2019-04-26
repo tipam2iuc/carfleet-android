@@ -8,31 +8,31 @@ import retrofit2.http.GET;
 
 
 public interface RetroFitApiInterface {
-    @GET("model?name=Audi")
+    @GET("modeles?marque=Audi")
    Call<ArrayList<Models>> getModelsAudi();
 
-    @GET("model?name=Bmw")
+    @GET("modeles?marque=Bmw")
     Call<ArrayList<Models>> getModelsBmw();
 
-    @GET("model?name=Citroen")
+    @GET("modeles?marque=Citroen")
     Call<ArrayList<Models>> getModelsCitroen();
 
-    @GET("model?name=Ford")
+    @GET("modeles?marque=Ford")
     Call<ArrayList<Models>> getModelsFord();
 
-    @GET("model?name=Mercedes")
+    @GET("modeles?marque=Mercedes")
     Call<ArrayList<Models>> getModelsMercedes();
 
-    @GET("model?name=Peugeot")
+    @GET("modeles?marque=Peugeot")
     Call<ArrayList<Models>> getModelsPeugeot();
 
-    @GET("model?name=Renault")
+    @GET("modeles?marque=Renault")
     Call<ArrayList<Models>> getModelsRenault();
 
-    @GET("model?name=Toyota")
+    @GET("modeles?marque=Toyota")
     Call<ArrayList<Models>> getModelsToyota();
 
-    @GET("model?name=Volkswagen")
+    @GET("modeles?marque=Volkswagen")
     Call<ArrayList<Models>> getModelsVolkswagen();
 
 

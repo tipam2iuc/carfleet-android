@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.amar.library.ui.StickyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:stickyHeader="@+id/tabs"
+    tools:context=".VehiculeDetails">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/AppTheme.NoActionBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_weight="1"
+            android:background="#1A237E"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/AppTheme.NoActionBar"
+            app:titleTextColor="@color/blanc"
+            app:subtitleTextColor="@color/blanc"
+            app:subtitle="Mercedes-Benz / C-class"
+            app:title="LT3238 - Douala">
+
+        </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vehicule_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:foregroundGravity="center"
+        android:background="#1A237E"
+        android:layout_gravity="center"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp"
+        android:overScrollMode="never"
+        android:paddingTop="30dp"
+        android:paddingLeft="45dp"
+        android:paddingRight="45dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        >
+
+
+    </android.support.v4.view.ViewPager>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/constrain_dot"
+    android:gravity="center"
+    android:background="#1A237E"
+    app:layout_constraintTop_toBottomOf="@id/vehicule_viewPager"
+    app:layout_constraintBottom_toTopOf="@id/tabs">
+    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        app:dotsColor="#1F6BAF"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="7.5dp"
+        app:dotsSpacing="3dp"
+        app:dotsStrokeWidth="2dp" />
+
+
+</LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        app:tabGravity="fill"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A237E"
+        app:tabTextColor="#7275C4"
+        app:tabSelectedTextColor="@color/blanc"
+        app:tabIndicatorColor="#2A97E5"
+        app:layout_constraintTop_toBottomOf="@id/constrain_dot"
+
+        >
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_text_11" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabItem2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_text_22" />
+
+        <android.support.design.widget.TabItem
+            android:id="@+id/tabItem3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tab_text_33" />
+
+    </android.support.design.widget.TabLayout>
+
+   <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@color/blanc"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+       app:layout_constraintTop_toBottomOf="@id/tabs"
+       app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>
+</com.amar.library.ui.StickyScrollView>

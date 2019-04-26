@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hp.carfleet">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,15 +18,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".MainActivity_sign" />
         <activity android:name=".SignUp" />
         <activity android:name=".SignIn" />
-
-
-            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".VehiculeDetails" />
+        android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".reset_password" />
-        <activity android:name=".BottomAppBar"></activity>
+        <activity android:name=".test" />
+        <activity android:name=".SearchActivity" />
+        <activity
+            android:name=".ModelDetails"
+            android:label="@string/title_activity_model_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ModelListActivity" />
+        <activity android:name=".VehiculeSearch"></activity>
     </application>
 
 </manifest>

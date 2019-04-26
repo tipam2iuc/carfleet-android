@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp">
+
+    <ImageView
+        android:id="@+id/iv_sample"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/mercedez_benz"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_sample"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="32dp"
+        android:layout_toEndOf="@id/iv_sample"
+        android:gravity="left"
+        android:text="Fulthonn"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_sample"
+        app:layout_constraintEnd_toStartOf="@id/tv_statut"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/iv_sample"
+        app:layout_constraintTop_toTopOf="@+id/iv_sample"
+        app:layout_constraintVertical_bias="0.345" />
+    <TextView
+        android:id="@+id/tv_marque"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@id/iv_sample"
+        android:textColor="@color/colorPrimary"
+        android:gravity="left"
+        android:text="Marque"
+        app:layout_constraintStart_toEndOf="@id/iv_sample"
+        app:layout_constraintTop_toBottomOf="@id/tv_sample"
+        app:layout_constraintEnd_toStartOf="@id/tv_modele"
+        app:layout_constraintBottom_toBottomOf="@id/iv_sample"/>
+
+    <TextView
+        android:id="@+id/tv_statut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Statut"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/tv_sample"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_sample"
+        app:layout_constraintTop_toTopOf="@id/tv_sample" />
+
+    <TextView
+        android:id="@+id/tv_modele"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Modele"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/tv_marque"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tv_statut"
+        app:layout_constraintTop_toBottomOf="@id/tv_marque"
+        app:layout_constraintTop_toTopOf="@id/tv_marque" />
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="5dp"
+    app:layout_constraintTop_toTopOf="@id/iv_sample"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:background="@color/colorPrimary"
+    >
+
+</View>
+</android.support.constraint.ConstraintLayout>

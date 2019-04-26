@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:scrollbars="none"
+    tools:context="com.example.hp.carfleet.SignIn">
+
+
+    <android.support.constraint.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            app:layout_constraintBottom_toTopOf="@+id/affichertxt"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/search_expanded_box"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/rounded_corners"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+        <ImageButton
+            android:id="@+id/ic_back"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_back"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+        <TextView
+            android:id="@+id/search_expanded_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/search_box_icon_size"
+            android:layout_weight="1"
+            android:hint="Rechercher un vehicule"
+            android:layout_marginLeft="@dimen/search_box_text_left_margin"
+            android:textSize="15dp"
+            android:textColor="@color/searchbox_text_color"
+            android:textColorHint="@color/searchbox_hint_text_color"
+            android:background="@null"
+            android:inputType="textFilter"
+
+                        android:singleLine="true"
+                        android:imeOptions="actionSearch" />
+                    <ImageButton
+                        android:id="@+id/search_expanded_magnifying_glass"
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_pin_drop_black_24dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:importantForAccessibility="no"
+                        android:tint="@color/searchbox_icon_tint"
+                        tools:visibility="visible"/>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/search_expanded_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/affichertxt"
+            android:paddingTop="@dimen/space20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="37dp"
+            android:text="Affiner les résultats"
+            android:textColorHint="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toTopOf="@+id/TextView1"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="56dp" />
+
+
+        <TextView
+            android:id="@+id/TextView1"
+            android:layout_width="333dp"
+android:focusable="true"
+            android:background="@drawable/bg_ediitext"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_car24dp"
+           
+            android:hint="Tous les models de voitures"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/affichertxt"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="29dp" />
+
+
+        <TextView
+            android:id="@+id/TextView2"
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:background="@drawable/bg_ediitext"
+
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_essence24dp"
+
+           
+            android:hint="Essence,Gasoil,Hybride"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/TextView1"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="29dp" />
+
+
+        <TextView
+            android:id="@+id/TextView3"
+            android:layout_width="332dp"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:background="@drawable/bg_ediitext"
+
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/space20"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_sort24dp"
+           
+            android:hint="Les plus demandés"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/TextView2"
+            tools:ignore="MissingConstraints"
+
+            tools:layout_editor_absoluteX="29dp" />
+
+        <TextView
+            android:id="@+id/TextView4"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:background="@drawable/bg_ediitext"
+
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_tree24dp"
+           
+            android:hint="Europe: coupés sportif,SUV"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/TextView3"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="29dp" />
+
+        <TextView
+            android:id="@+id/TextView5"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_car24dp"
+           
+            android:background="@drawable/bg_ediitext"
+
+            app:layout_constraintTop_toBottomOf="@+id/TextView4"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="29dp" />
+
+        <TextView
+            android:id="@+id/TextView6"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_car24dp"
+           
+            app:layout_constraintTop_toBottomOf="@+id/TextView5"
+            tools:ignore="MissingConstraints"
+            android:background="@drawable/bg_ediitext"
+
+            tools:layout_editor_absoluteX="29dp"
+            android:focusable="true" />
+
+        <TextView
+            android:id="@+id/TextView7"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_ediitext"
+
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ic_car24dp"
+           
+            app:layout_constraintTop_toBottomOf="@+id/TextView6"
+            tools:ignore="MissingConstraints"
+
+            tools:layout_editor_absoluteX="29dp" />
+
+        <LinearLayout
+            android:id="@+id/linear1"
+
+            android:layout_width="331dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/TextView7"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="29dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more_black_24dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="        Voir plus d'options..."
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+
+            android:layout_width="331dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/linear1"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="29dp">
+
+            <Button
+                android:layout_width="121dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/transparent_bg_bordered_button"
+                android:text="reinitialiser"
+                android:textColor="@color/colorBlueSky" />
+
+
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

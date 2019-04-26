@@ -17,12 +17,17 @@
     </style>
 
     <style name="AppTheme.NoActionBar">
-        <item name="android:statusBarColor">@color/blue_overlay</item>
+        <item name="android:statusBarColor">#01014B</item>
         <item name="colorPrimaryDark">@color/forecolor_tab_active</item>
         <item name="colorPrimary">@color/blanc</item>
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
     </style>
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 
     style="@style/Widget.MaterialComponents.BottomAppBar"
 
