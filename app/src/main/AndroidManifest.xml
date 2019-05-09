@@ -22,7 +22,9 @@
         <activity android:name=".SignUp" />
         <activity android:name=".SignIn" />
         <activity android:name=".VehiculeDetails" />
-        android:theme="@style/AppTheme.NoActionBar" />
+<!--
+       < android:theme="@style/AppTheme.NoActionBar" />
+-->
         <activity android:name=".reset_password" />
         <activity android:name=".test" />
         <activity android:name=".SearchActivity" />

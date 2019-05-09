@@ -30,7 +30,10 @@ public class model {
         this.nomModel = nomModel;
     }
 
-    public model(){}
+    public model()
+    {
+
+    }
     int viewType;
     boolean favoris = false;
     String nomModel;

@@ -7,20 +7,96 @@ import java.util.Date;
 
 public class Vehicle {
 
-    @SerializedName("Id")
-    private String Id;
-    @SerializedName("marque")
-    private String Marque;
-    @SerializedName("Description")
-    private String Description;
-    @SerializedName("color")
-    private String Couleur;
-    @SerializedName("pictures")
-    private String[] Images;
-    @SerializedName("commissioning")
-    private Date MiseEnService;
+    @SerializedName("identifiant")
+    private String identifiant;
+    @SerializedName("immatriculation")
+    private String immatriculation;
+    @SerializedName("numeroChassis")
+    private int numeroChassis;
+    @SerializedName("couleur")
+    private String couleur;
+    @SerializedName("dateMiseEnService")
+    private Date dateMiseEnService;
+    @SerializedName("parkingId")
+    private Date parkingId;
     @SerializedName("categoryId")
     private String CategoryId;
+    @SerializedName("dateImmatriculation")
+    private Date dateImmatriculation;
+    @SerializedName("images")
+    private String[] image;
+    @SerializedName("kilometrage")
+    private String kilometrage;
+    @SerializedName("prixCatalogue")
+    private double prixCatalogue;
+    @SerializedName("entrepriseId")
+    private String entrepriseId;
+
+    public Vehicle(String identifiant, String immatriculation, int numeroChassis, String couleur, Date dateMiseEnService, Date parkingId, String categoryId, Date dateImmatriculation, String[] image, String kilometrage, double prixCatalogue, String entrepriseId) {
+        this.identifiant = identifiant;
+        this.immatriculation = immatriculation;
+        this.numeroChassis = numeroChassis;
+        this.couleur = couleur;
+        this.dateMiseEnService = dateMiseEnService;
+        this.parkingId = parkingId;
+        CategoryId = categoryId;
+        this.dateImmatriculation = dateImmatriculation;
+        this.image = image;
+        this.kilometrage = kilometrage;
+        this.prixCatalogue = prixCatalogue;
+        this.entrepriseId = entrepriseId;
+    }
+
+    public Vehicle() {
+    }
+
+    public String getIdentifiant() {
+        return identifiant;
+    }
+
+    public void setIdentifiant(String identifiant) {
+        this.identifiant = identifiant;
+    }
+
+    public String getImmatriculation() {
+        return immatriculation;
+    }
+
+    public void setImmatriculation(String immatriculation) {
+        this.immatriculation = immatriculation;
+    }
+
+    public int getNumeroChassis() {
+        return numeroChassis;
+    }
+
+    public void setNumeroChassis(int numeroChassis) {
+        this.numeroChassis = numeroChassis;
+    }
+
+    public String getCouleur() {
+        return couleur;
+    }
+
+    public void setCouleur(String couleur) {
+        this.couleur = couleur;
+    }
+
+    public Date getDateMiseEnService() {
+        return dateMiseEnService;
+    }
+
+    public void setDateMiseEnService(Date dateMiseEnService) {
+        this.dateMiseEnService = dateMiseEnService;
+    }
+
+    public Date getParkingId() {
+        return parkingId;
+    }
+
+    public void setParkingId(Date parkingId) {
+        this.parkingId = parkingId;
+    }
 
     public String getCategoryId() {
         return CategoryId;
@@ -30,76 +106,61 @@ public class Vehicle {
         CategoryId = categoryId;
     }
 
-    public Vehicle() {
+    public Date getDateImmatriculation() {
+        return dateImmatriculation;
     }
 
-    public Vehicle(String id, String marque, String description, String couleur, String[] images, Date miseEnService, String categoryId) {
-        Id = id;
-        Marque = marque;
-        Description = description;
-        Couleur = couleur;
-        Images = images;
-        MiseEnService = miseEnService;
-        CategoryId = categoryId;
+    public void setDateImmatriculation(Date dateImmatriculation) {
+        this.dateImmatriculation = dateImmatriculation;
     }
 
-    public String getId() {
-        return Id;
+    public String[] getImage() {
+        return image;
     }
 
-    public void setId(String id) {
-        Id = id;
+    public void setImage(String[] image) {
+        this.image = image;
     }
 
-    public String getMarque() {
-        return Marque;
+    public String getKilometrage() {
+        return kilometrage;
     }
 
-    public void setMarque(String marque) {
-        Marque = marque;
+    public void setKilometrage(String kilometrage) {
+        this.kilometrage = kilometrage;
     }
 
-    public String getDescription() {
-        return Description;
+    public double getPrixCatalogue() {
+        return prixCatalogue;
     }
 
-    public void setDescription(String description) {
-        Description = description;
+    public void setPrixCatalogue(double prixCatalogue) {
+        this.prixCatalogue = prixCatalogue;
     }
 
-    public String getCouleur() {
-        return Couleur;
+    public String getEntrepriseId() {
+        return entrepriseId;
     }
 
-    public void setCouleur(String couleur) {
-        Couleur = couleur;
-    }
-
-    public String[] getImages() {
-        return Images;
-    }
-
-    public void setImages(String images) {
-        Images[0] = images;
-    }
-
-    public Date getMiseEnService() {
-        return MiseEnService;
-    }
-
-    public void setMiseEnService(Date miseEnService) {
-        MiseEnService = miseEnService;
+    public void setEntrepriseId(String entrepriseId) {
+        this.entrepriseId = entrepriseId;
     }
 
     @Override
     public String toString() {
         return "Vehicle{" +
-                "Id='" + Id + '\'' +
-                ", Marque='" + Marque + '\'' +
-                ", Description='" + Description + '\'' +
-                ", Couleur='" + Couleur + '\'' +
-                ", Images=" + Arrays.toString(Images) +
-                ", MiseEnService=" + MiseEnService +
+                "identifiant='" + identifiant + '\'' +
+                ", immatriculation='" + immatriculation + '\'' +
+                ", numeroChassis=" + numeroChassis +
+                ", couleur='" + couleur + '\'' +
+                ", dateMiseEnService=" + dateMiseEnService +
+                ", parkingId=" + parkingId +
+                ", CategoryId='" + CategoryId + '\'' +
+                ", dateImmatriculation=" + dateImmatriculation +
+                ", image=" + Arrays.toString(image) +
+                ", kilometrage='" + kilometrage + '\'' +
+                ", prixCatalogue=" + prixCatalogue +
+                ", entrepriseId='" + entrepriseId + '\'' +
                 '}';
     }
 }

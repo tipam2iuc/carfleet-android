@@ -113,7 +113,7 @@ public class vehicule {
         this.transmition = transmition;
         this.consommation = consommation;
         this.position = position;
-        this.type_position = type_position;
+       this.type_position = type_position;
         this.occupation = occupation;
         this.prix = prix;
     }
