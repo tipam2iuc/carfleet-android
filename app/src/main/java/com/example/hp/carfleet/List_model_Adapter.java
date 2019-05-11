@@ -1,7 +1,5 @@
 package com.example.hp.carfleet;
-import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -15,18 +13,18 @@ import java.util.ArrayList;
 
 public class List_model_Adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     Context context;
-    ArrayList<model> modelList;
+    ArrayList<Models> mModelsList;
     ViewGroup group;
     private final List_model_Adapter.OnItemClickListener listener;
 
     public interface OnItemClickListener {
-        void onItemClick(model item);
+        void onItemClick(Models item);
     }
 
 
-    public List_model_Adapter(ArrayList<model> models, Context context,List_model_Adapter.OnItemClickListener listener){
+    public List_model_Adapter(ArrayList<Models> Models, Context context, List_model_Adapter.OnItemClickListener listener){
         this.context = context;
-        this.modelList = models;
+        this.mModelsList = Models;
         this.listener=listener;
     }
 
@@ -80,26 +78,26 @@ public class List_model_Adapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         if(viewHolder instanceof GroupViewHolder){
             try {
-                bind(modelList.get(i),context, listener);
+                bind(mModelsList.get(i),context, listener);
             } catch (IOException e) {
                 e.printStackTrace();
             }
             GroupViewHolder groupViewHolder = (GroupViewHolder)viewHolder;
-            model v = modelList.get(i);
+            Models v = mModelsList.get(i);
             groupViewHolder.tregion.setText(v.getNomModel().length()<=1?v.getNomModel():v.getNomModel().substring(0,1));
         }
         else if(viewHolder instanceof ModelHolder){
             try {
-                bind(modelList.get(i),context, listener);
+                bind(mModelsList.get(i),context, listener);
             } catch (IOException e) {
                 e.printStackTrace();
             }
             ModelHolder modelHolder = (ModelHolder) viewHolder;
-            model v = modelList.get(i);
+            Models v = mModelsList.get(i);
         }
         else if(viewHolder instanceof  GroupViewHolderFavorite){
             try {
-                bind(modelList.get(i),context, listener);
+                bind(mModelsList.get(i),context, listener);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -107,23 +105,23 @@ public class List_model_Adapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         }
         else if(viewHolder instanceof ModelHolderFavorite){
             try {
-                bind(modelList.get(i),context, listener);
+                bind(mModelsList.get(i),context, listener);
             } catch (IOException e) {
                 e.printStackTrace();
             }
             ModelHolderFavorite modelHolderFavorite = (ModelHolderFavorite) viewHolder;
-            model v = modelList.get(i);
+            Models v = mModelsList.get(i);
         }
     }
 
     @Override
     public int getItemViewType(int position) {
-        return modelList.get(position).getViewType();
+        return mModelsList.get(position).getViewType();
     }
 
     @Override
     public int getItemCount() {
-        return modelList.size();
+        return mModelsList.size();
     }
 
     public static class ModelHolder extends RecyclerView.ViewHolder {
@@ -202,7 +200,7 @@ public class List_model_Adapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         }
     }
 
-    public void bind(final model models,final Context context, final List_model_Adapter.OnItemClickListener listener) throws IOException {
+    public void bind(final Models models, final Context context, final List_model_Adapter.OnItemClickListener listener) throws IOException {
 
 
         group.setOnClickListener(new View.OnClickListener() {

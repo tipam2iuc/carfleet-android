@@ -91,7 +91,7 @@ android:focusable="true"
             android:clickable="true"
             android:drawableLeft="@drawable/ic_car24dp"
            
-            android:hint="Tous les models de voitures"
+            android:hint="Tous les Models de voitures"
             android:textSize="16dp"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/affichertxt"

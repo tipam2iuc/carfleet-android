@@ -67,16 +67,16 @@ public class ModelAdapter extends RecyclerView.Adapter<ModelAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
        // try {
-          //  MyViewHolder.bind(modelList.get(position));
+          //  MyViewHolder.bind(mModelsList.get(position));
         try {
             holder.bind(marquesList.get(position),context, listener);
         } catch (IOException e) {
             e.printStackTrace();
         }
         TextView textView=new TextView(context);
-        textView.setText(marquesList.get(position).getName());
-        holder.carTitle.setText(marquesList.get(position).getName());
-        Glide.with(context).load( marquesList.get(position).getPicture()).into(holder.carImage);
+        textView.setText(marquesList.get(position).getNomComplet());
+        holder.carTitle.setText(marquesList.get(position).getNomComplet());
+        Glide.with(context).load( marquesList.get(position).getImagePath()).into(holder.carImage);
        // } catch (IOException e) {
          //   e.printStackTrace();
       //  }

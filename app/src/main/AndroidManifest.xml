@@ -22,9 +22,6 @@
         <activity android:name=".SignUp" />
         <activity android:name=".SignIn" />
         <activity android:name=".VehiculeDetails" />
-<!--
-       < android:theme="@style/AppTheme.NoActionBar" />
--->
         <activity android:name=".reset_password" />
         <activity android:name=".test" />
         <activity android:name=".SearchActivity" />
@@ -33,7 +30,7 @@
             android:label="@string/title_activity_model_details"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ModelListActivity" />
-        <activity android:name=".VehiculeSearch"></activity>
+        <activity android:name=".VehiculeSearch" />
     </application>
 
 </manifest>

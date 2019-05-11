@@ -16,42 +16,42 @@ public class CommonModel {
     public static List<String> regionAvailable = new ArrayList<>();
 
     public CommonModel(){}
-    public static ArrayList<model> sortList(ArrayList<model> vehiculeArrayList){
-        Collections.sort(vehiculeArrayList, new Comparator<model>() {
+    public static ArrayList<Models> sortList(ArrayList<Models> vehiculeArrayList){
+        Collections.sort(vehiculeArrayList, new Comparator<Models>() {
             @Override
-            public int compare(model o1, model o2) {
+            public int compare(Models o1, Models o2) {
                 return o1.getNomModel().compareTo(o2.getNomModel());
             }
         });
 
-        ArrayList<model> favoris = new ArrayList<>();
-        for(model v: vehiculeArrayList){
+        ArrayList<Models> favoris = new ArrayList<>();
+        for(Models v: vehiculeArrayList){
             if(v.isFavoris()){
                 favoris.add(v);
             }
         }
         vehiculeArrayList.removeAll(favoris);
-        ArrayList<model> finalList = new ArrayList<>();
+        ArrayList<Models> finalList = new ArrayList<>();
         finalList.addAll(favoris);
         finalList.addAll(vehiculeArrayList);
         return finalList;
     }
 
-    public static ArrayList<model> addAlphabet(ArrayList<model> vehicules) {
-        ArrayList<model> custumList = new ArrayList<>();
-        model firstPosition = new model();
+    public static ArrayList<Models> addAlphabet(ArrayList<Models> vehicules) {
+        ArrayList<Models> custumList = new ArrayList<>();
+        Models firstPosition = new Models(null, "Audi A1", "188 kw", "250 km/h", "3954 cm", "1740 cm", "1416 cm", 5, "https://firebasestorage.googleapis.com/v0/b/sign-up-master-b2f0b.appspot.com/o/Audi%20A1.jpg?alt=media&token=54cec5c7-6c5d-4ac0-a9f6-322242e9822a", "voiture", "berline", null, "Diesel-Essence", "manuelle");
 
         firstPosition.setNomModel("?");
         firstPosition.setViewType(CommonModel.VIEWTYPE_OTHER);
         regionAvailable.add("?");
         custumList.add(firstPosition);
-        firstPosition = new model();
+        firstPosition = new Models(null, "Audi A1", "188 kw", "250 km/h", "3954 cm", "1740 cm", "1416 cm", 5, "https://firebasestorage.googleapis.com/v0/b/sign-up-master-b2f0b.appspot.com/o/Audi%20A1.jpg?alt=media&token=54cec5c7-6c5d-4ac0-a9f6-322242e9822a", "voiture", "berline", null, "Diesel-Essence", "manuelle");
 
         firstPosition.setNomModel("&");
         firstPosition.setViewType(CommonModel.VIEWTYPE_ALL);
         regionAvailable.add("&");
         custumList.add(firstPosition);
-        firstPosition = new model();
+        firstPosition = new Models(null, "Audi A1", "188 kw", "250 km/h", "3954 cm", "1740 cm", "1416 cm", 5, "https://firebasestorage.googleapis.com/v0/b/sign-up-master-b2f0b.appspot.com/o/Audi%20A1.jpg?alt=media&token=54cec5c7-6c5d-4ac0-a9f6-322242e9822a", "voiture", "berline", null, "Diesel-Essence", "manuelle");
 
         if (vehicules.get(0).isFavoris()) {
             firstPosition.setNomModel(".");
@@ -67,7 +67,7 @@ public class CommonModel {
         int i = 0;
 
         for (i = 0; i<vehicules.size()-1; i++){
-            model v = new model();
+            Models v = new Models(null, "Audi A1", "188 kw", "250 km/h", "3954 cm", "1740 cm", "1416 cm", 5, "https://firebasestorage.googleapis.com/v0/b/sign-up-master-b2f0b.appspot.com/o/Audi%20A1.jpg?alt=media&token=54cec5c7-6c5d-4ac0-a9f6-322242e9822a", "voiture", "berline", null, "Diesel-Essence", "manuelle");
 
             String region1 = vehicules.get(i).getNomModel().substring(0,1).toUpperCase();
             String region2 = vehicules.get(i+1).getNomModel().substring(0,1).toUpperCase();

@@ -257,8 +257,8 @@ public class frag_all extends Fragment{
 //            @Override
 //            public void onResponse(@NonNull Call<ArrayList<Models>> call, @NonNull Response<ArrayList<Models>> response) {
 //
-//                for (Models model:response.body()){
-//                    list.add(model);
+//                for (Models Models:response.body()){
+//                    list.add(Models);
 //                }
 //                modelAdapter = new ModelAdapter(response.body(), view.getContext());
 //

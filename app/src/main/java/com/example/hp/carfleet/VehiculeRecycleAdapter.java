@@ -46,15 +46,15 @@ public class VehiculeRecycleAdapter extends RecyclerView.Adapter<VehiculeRecycle
     @Override
     public void onBindViewHolder(@NonNull VehiculeRecycleAdapter.MyViewHolder holder, int position) {
         // try {
-        //  MyViewHolder.bind(modelList.get(position));
+        //  MyViewHolder.bind(mModelsList.get(position));
         try {
             holder.bind(vehicleList.get(position),context, listener);
         } catch (IOException e) {
             e.printStackTrace();
         }
         TextView textView=new TextView(context);
-        textView.setText(vehicleList.get(position).getName());
-        Glide.with(context).load( vehicleList.get(position).getPicture()).into(holder.carImage);
+        textView.setText(vehicleList.get(position).getNomComplet());
+        Glide.with(context).load( vehicleList.get(position).getImagePath()).into(holder.carImage);
         // } catch (IOException e) {
         //   e.printStackTrace();
         //  }

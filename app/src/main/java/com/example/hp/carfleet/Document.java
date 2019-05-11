@@ -4,6 +4,88 @@ import java.util.Date;
 
 public class Document {
 
+    public Document(String id, String name, Document.type type, Date dateCreation, Date dateExpiration, Date dateDelivrance, String fichier) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+        this.dateCreation = dateCreation;
+        this.dateExpiration = dateExpiration;
+        this.dateDelivrance = dateDelivrance;
+        this.fichier = fichier;
+    }
+
+    public Document() {
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Document.type getType() {
+        return type;
+    }
+
+    public void setType(Document.type type) {
+        this.type = type;
+    }
+
+    public Date getDateCreation() {
+        return dateCreation;
+    }
+
+    public void setDateCreation(Date dateCreation) {
+        this.dateCreation = dateCreation;
+    }
+
+    public Date getDateExpiration() {
+        return dateExpiration;
+    }
+
+    public void setDateExpiration(Date dateExpiration) {
+        this.dateExpiration = dateExpiration;
+    }
+
+    public Date getDateDelivrance() {
+        return dateDelivrance;
+    }
+
+    public void setDateDelivrance(Date dateDelivrance) {
+        this.dateDelivrance = dateDelivrance;
+    }
+
+    public String getFichier() {
+        return fichier;
+    }
+
+    public void setFichier(String fichier) {
+        this.fichier = fichier;
+    }
+
+    @Override
+    public String toString() {
+        return "Document{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", type=" + type +
+                ", dateCreation=" + dateCreation +
+                ", dateExpiration=" + dateExpiration +
+                ", dateDelivrance=" + dateDelivrance +
+                ", fichier='" + fichier + '\'' +
+                '}';
+    }
+
     enum type
     {
         Immatriculation,
@@ -14,105 +96,15 @@ public class Document {
         PermisDeConduire
     }
 
-    private String Id;
-    private String Name;
-    private type Type;
-    private Date CreatedDate;
-    private String Picture;
-    private Date ExpirationDate;
-    private Date DeliveryDate;
-    private String VehicleId;
+    private String id;
+    private String name;
+    private type type;
+    private Date dateCreation;
 
-    public Document() {
-    }
+    private Date dateExpiration;
+    private Date dateDelivrance;
+    private String fichier;
 
-    public Document(String id, String name, type type, Date createdDate, String picture, Date expirationDate, Date deliveryDate, String vehicleId) {
-        Id = id;
-        Name = name;
-        Type = type;
-        CreatedDate = createdDate;
-        Picture = picture;
-        ExpirationDate = expirationDate;
-        DeliveryDate = deliveryDate;
-        VehicleId = vehicleId;
-    }
 
-    public String getId() {
-        return Id;
-    }
-
-    public void setId(String id) {
-        Id = id;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public type getType() {
-        return Type;
-    }
-
-    public void setType(type type) {
-        Type = type;
-    }
-
-    public Date getCreatedDate() {
-        return CreatedDate;
-    }
-
-    public void setCreatedDate(Date createdDate) {
-        CreatedDate = createdDate;
-    }
-
-    public String getPicture() {
-        return Picture;
-    }
-
-    public void setPicture(String picture) {
-        Picture = picture;
-    }
-
-    public Date getExpirationDate() {
-        return ExpirationDate;
-    }
-
-    public void setExpirationDate(Date expirationDate) {
-        ExpirationDate = expirationDate;
-    }
-
-    public Date getDeliveryDate() {
-        return DeliveryDate;
-    }
-
-    public void setDeliveryDate(Date deliveryDate) {
-        DeliveryDate = deliveryDate;
-    }
-
-    public String getVehicleId() {
-        return VehicleId;
-    }
-
-    public void setVehicleId(String vehicleId) {
-        VehicleId = vehicleId;
-    }
-
-    @Override
-    public String toString() {
-        return "Document{" +
-                "Id='" + Id + '\'' +
-                ", Name='" + Name + '\'' +
-                ", Type=" + Type +
-                ", CreatedDate=" + CreatedDate +
-                ", Picture='" + Picture + '\'' +
-                ", ExpirationDate=" + ExpirationDate +
-                ", DeliveryDate=" + DeliveryDate +
-                ", VehicleId='" + VehicleId + '\'' +
-                '}';
-    }
 }
 

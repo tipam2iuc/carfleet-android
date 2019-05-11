@@ -73,7 +73,4 @@ public class VehiculeAdapter extends PagerAdapter {
         container.removeView((CardView) object);
     }
 
-
-
-
 }
